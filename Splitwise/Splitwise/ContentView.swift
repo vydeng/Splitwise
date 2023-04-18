@@ -69,7 +69,7 @@ struct ContentView: View {
                     Button("Add Friends") {
                         print("Pressed")
                     }
-                    .foregroundColor(.green)
+                    .foregroundColor(Color("green"))
                 }
             }
             .toolbar {
@@ -94,7 +94,7 @@ struct ContentView: View {
                         }
                         Spacer()
                         Button {
-                            print("Plus")
+                            vm.isShowing = true
                         } label: {
                             ZStack {
                                 Color("green")
@@ -133,6 +133,9 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .sheet(isPresented: $vm.isShowing) {
+            CreateChargeView(vm: vm)
         }
     }
 }

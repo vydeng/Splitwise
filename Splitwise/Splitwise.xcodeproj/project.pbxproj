@@ -15,6 +15,7 @@
 		73D4A09629EF199800740F75 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09529EF199700740F75 /* Charge.swift */; };
 		73D4A09829EF19E300740F75 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09729EF19E300740F75 /* SwiftUIView.swift */; };
 		73D4A09A29EF1ABB00740F75 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09929EF1ABB00740F75 /* FriendsViewModel.swift */; };
+		73D4A09C29EF41AC00740F75 /* CreateChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09B29EF41AB00740F75 /* CreateChargeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		73D4A09529EF199700740F75 /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
 		73D4A09729EF19E300740F75 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		73D4A09929EF1ABB00740F75 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		73D4A09B29EF41AB00740F75 /* CreateChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChargeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				7375891E29EF0EE800C74C54 /* SplitwiseApp.swift */,
 				7375892029EF0EE800C74C54 /* ContentView.swift */,
+				73D4A09B29EF41AB00740F75 /* CreateChargeView.swift */,
 				73D4A09929EF1ABB00740F75 /* FriendsViewModel.swift */,
 				73D4A09329EF17C100740F75 /* Friend.swift */,
 				73D4A09529EF199700740F75 /* Charge.swift */,
@@ -153,6 +156,7 @@
 			files = (
 				73D4A09429EF17C100740F75 /* Friend.swift in Sources */,
 				73D4A09629EF199800740F75 /* Charge.swift in Sources */,
+				73D4A09C29EF41AC00740F75 /* CreateChargeView.swift in Sources */,
 				73D4A09A29EF1ABB00740F75 /* FriendsViewModel.swift in Sources */,
 				7375892129EF0EE800C74C54 /* ContentView.swift in Sources */,
 				7375891F29EF0EE800C74C54 /* SplitwiseApp.swift in Sources */,

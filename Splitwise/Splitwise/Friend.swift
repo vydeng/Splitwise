@@ -10,7 +10,7 @@ import Foundation
 struct Friend: Identifiable {
     let id = UUID()
     var name: String
-    var amount: Int
+    var amount: Float
     var owe: Bool
     
     func getStatus() -> String {

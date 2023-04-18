@@ -12,16 +12,21 @@ struct CreateChargeView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        Text("Create a Charge")
-//        NavigationStack {
-//            List {
-//                Picker("With you and: ", selection: $vm.chargeeID) {
-//                    ForEach(vm.friends) { friend in
-//                        Text("\(friend.name)").tag(friend.id)
-//                    }
-//                }
-//            }
-//        }
+        NavigationStack {
+            List {
+                Picker("With you and: ", selection: $vm.chargeeID) {
+                    ForEach(vm.friends) { friend in
+                        Text("\(friend.name)").tag(friend)
+                    }
+                }
+                Section {
+                    TextField("Enter a description", text: $vm.description)
+                    TextField("0.00", value: $vm.amount, format: .number)
+                }
+            }
+            .navigationTitle("Add an expense")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

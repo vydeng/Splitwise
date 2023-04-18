@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Friend: Identifiable {
+struct Friend: Identifiable, Hashable {
     let id = UUID()
     var name: String
     var amount: Float

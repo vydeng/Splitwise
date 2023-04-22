@@ -13,7 +13,7 @@ struct ActivityView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(vm.charges) {charge in
+                ForEach(vm.charges.reversed()) {charge in
                     HStack {
                         Image(systemName: "list.clipboard")
                             .font(.largeTitle)

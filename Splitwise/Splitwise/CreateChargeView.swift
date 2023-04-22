@@ -70,16 +70,16 @@ struct CreateChargeView: View {
                             vm.charges.append(charge)
                             if charge.owe {
                                 vm.chargee.amount -= charge.amount
+                                vm.total -= charge.amount
                             }
                             else {
                                 vm.chargee.amount += charge.amount
+                                vm.total += charge.amount
                             }
                             vm.chargee.owe = vm.chargee.checkOwe()
                             print(vm.chargee.owe)
                             print(vm.chargee.amount)
-                            vm.amount = 0.00
-                            vm.owe = false
-                            vm.description = ""
+                            vm.reset()
                             self.tabSelection = 4
                         }
                         .foregroundColor(Color("green"))

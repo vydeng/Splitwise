@@ -42,10 +42,10 @@ class Friend: Identifiable, Hashable {
             status = "settled up"
         }
         else if owe {
-            status = "You owe \(abs(amount))"
+            status = "you owe \(String(format: "%.2f", abs(amount)))"
         }
         else {
-            status = "They owe \(abs(amount))"
+            status = "owes you \(String(format: "%.2f", abs(amount)))"
         }
         return status
     }

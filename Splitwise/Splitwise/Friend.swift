@@ -7,11 +7,34 @@
 
 import Foundation
 
-struct Friend: Identifiable, Hashable {
+class Friend: Identifiable, Hashable {
+    static func == (lhs: Friend, rhs: Friend) -> Bool {
+        lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     let id = UUID()
-    var name: String
-    var amount: Float
-    var owe: Bool
+    @Published var name: String
+    @Published var amount: Float
+    @Published var owe: Bool
+    
+    init(name: String, amount: Float, owe: Bool) {
+        self.name = name
+        self.amount = amount
+        self.owe = owe
+    }
+    
+    func checkOwe() -> Bool {
+        if amount >= 0 {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     
     func getStatus() -> String {
         var status: String = ""
@@ -19,10 +42,10 @@ struct Friend: Identifiable, Hashable {
             status = "settled up"
         }
         else if owe {
-            status = "You owe \(amount)"
+            status = "You owe \(abs(amount))"
         }
         else {
-            status = "They owe \(amount)"
+            status = "They owe \(abs(amount))"
         }
         return status
     }

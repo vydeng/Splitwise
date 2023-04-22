@@ -10,7 +10,7 @@ import Foundation
 struct Charge: Identifiable {
     let id = UUID()
     var friend: Friend
-    var amount: Int
+    var amount: Float
     var owe: Bool
     var description: String
 }

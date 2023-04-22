@@ -9,133 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var vm = FriendsViewModel()
+    @State private var tabSelection = 1
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color("lightGray")
-                    .frame(height: 100)
-                    .cornerRadius(25)
-                    .padding(.horizontal)
-                HStack {
-                    Image("orange-triangle")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 70, height: 70)
-                        .cornerRadius(35)
-                    Spacer()
-                    VStack {
-                        Text("Total Balance")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, 5)
-                            .bold()
-                        Text("You are all settled up")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .padding(.leading, 5)
-                    Spacer()
-                    Image(systemName:"line.3.horizontal.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25, height: 25)
-                        .padding(.bottom, 30)
+        TabView(selection: $tabSelection) {
+            FriendsView(vm: vm)
+                .tabItem {
+                    Label("Friends", systemImage: "person.fill")
                 }
-                .padding(.horizontal, 50)
-            }
-            List{
-                ForEach(vm.friends) { friend in
-                    NavigationLink (destination: Text(friend.name), label: { HStack {
-                        Image(systemName: "person.crop.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 35, height: 35)
-                        Text(friend.name)
-                            .padding(.horizontal)
-                            .padding(.vertical, 10)
-                        Spacer()
-                        Text(friend.getStatus())
-                            .font(.system(size: 15))
-                    }
-                    })
+                .tag(1)
+            Text("Groups")
+                .tabItem {
+                    Label("Groups", systemImage: "person.3")
                 }
-            }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Friends")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image(systemName: "magnifyingglass")
+                .tag(2)
+            CreateChargeView(vm: vm, tabSelection: $tabSelection)
+                .tabItem {
+                    Label("New", systemImage: "plus.square.fill")
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add Friends") {
-                        print("Pressed")
-                    }
-                    .foregroundColor(Color("green"))
+                .tag(3)
+            ActivityView(vm: vm)
+                .tabItem {
+                    Label("Activity", systemImage: "chart.xyaxis.line")
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    HStack {
-                        VStack {
-                            Image(systemName: "person.fill")
-                            Text("Friends")
-                                .font(.system(size: 13))
-                        }
-                        Spacer()
-                        Button {
-                            print("Groups")
-                        } label: {
-                            VStack {
-                                Image(systemName: "person.3")
-                                    .foregroundColor(.gray)
-                                Text("Groups")
-                                    .foregroundColor(.gray)
-                                    .font(.system(size: 13))
-                            }
-                        }
-                        Spacer()
-                        Button {
-                            vm.isShowing = true
-                        } label: {
-                            ZStack {
-                                Color("green")
-                                    .frame(width: 40, height: 40)
-                                Image(systemName: "plus")
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        Spacer()
-                        Button {
-                            print("Activity")
-                        } label: {
-                            VStack {
-                                Image(systemName: "chart.xyaxis.line")
-                                    .foregroundColor(.gray)
-                                Text("Activity")
-                                    .foregroundColor(.gray)
-                                    .font(.system(size: 13))
-                            }
-                        }
-                        Spacer()
-                        Button {
-                            print("Account")
-                        } label: {
-                            VStack {
-                                Image("orange-triangle")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 20, height: 20)
-                                    .cornerRadius(10)
-                                Text("Account")
-                                    .foregroundColor(.gray)
-                                    .font(.system(size: 13))
-                            }
-                        }
-                    }
+                .tag(4)
+            Text("Account")
+                .tabItem {
+                    Label("Account", systemImage: "person.crop.circle.fill")
                 }
-            }
-        }
-        .sheet(isPresented: $vm.isShowing) {
-            CreateChargeView(vm: vm)
+                .tag(5)
         }
     }
 }

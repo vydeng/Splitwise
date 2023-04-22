@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		737397BE29F31C4D0033EFEA /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737397BD29F31C4D0033EFEA /* FriendsView.swift */; };
 		7375891F29EF0EE800C74C54 /* SplitwiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375891E29EF0EE800C74C54 /* SplitwiseApp.swift */; };
 		7375892129EF0EE800C74C54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375892029EF0EE800C74C54 /* ContentView.swift */; };
 		7375892329EF0EEE00C74C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7375892229EF0EEE00C74C54 /* Assets.xcassets */; };
@@ -16,9 +17,11 @@
 		73D4A09829EF19E300740F75 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09729EF19E300740F75 /* SwiftUIView.swift */; };
 		73D4A09A29EF1ABB00740F75 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09929EF1ABB00740F75 /* FriendsViewModel.swift */; };
 		73D4A09C29EF41AC00740F75 /* CreateChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A09B29EF41AB00740F75 /* CreateChargeView.swift */; };
+		73E8C99029F471B7001BE339 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8C98F29F471B7001BE339 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		737397BD29F31C4D0033EFEA /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		7375891B29EF0EE800C74C54 /* Splitwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7375891E29EF0EE800C74C54 /* SplitwiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitwiseApp.swift; sourceTree = "<group>"; };
 		7375892029EF0EE800C74C54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		73D4A09729EF19E300740F75 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		73D4A09929EF1ABB00740F75 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		73D4A09B29EF41AB00740F75 /* CreateChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChargeView.swift; sourceTree = "<group>"; };
+		73E8C98F29F471B7001BE339 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,9 @@
 			children = (
 				7375891E29EF0EE800C74C54 /* SplitwiseApp.swift */,
 				7375892029EF0EE800C74C54 /* ContentView.swift */,
+				737397BD29F31C4D0033EFEA /* FriendsView.swift */,
 				73D4A09B29EF41AB00740F75 /* CreateChargeView.swift */,
+				73E8C98F29F471B7001BE339 /* ActivityView.swift */,
 				73D4A09929EF1ABB00740F75 /* FriendsViewModel.swift */,
 				73D4A09329EF17C100740F75 /* Friend.swift */,
 				73D4A09529EF199700740F75 /* Charge.swift */,
@@ -156,6 +162,8 @@
 			files = (
 				73D4A09429EF17C100740F75 /* Friend.swift in Sources */,
 				73D4A09629EF199800740F75 /* Charge.swift in Sources */,
+				73E8C99029F471B7001BE339 /* ActivityView.swift in Sources */,
+				737397BE29F31C4D0033EFEA /* FriendsView.swift in Sources */,
 				73D4A09C29EF41AC00740F75 /* CreateChargeView.swift in Sources */,
 				73D4A09A29EF1ABB00740F75 /* FriendsViewModel.swift in Sources */,
 				7375892129EF0EE800C74C54 /* ContentView.swift in Sources */,

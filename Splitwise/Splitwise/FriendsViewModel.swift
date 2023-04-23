@@ -8,7 +8,7 @@
 import Foundation
 
 class FriendsViewModel: ObservableObject {
-    @Published var friends: [Friend] = [Friend(name:"Vivian", amount:0.00, owe: false), Friend(name: "Alec", amount: 0.00, owe: false), Friend(name: "Sophie", amount: 0.00, owe: false)]
+    @Published var friends: [Friend] = [Friend(name:"Vivian Deng", amount:0.00, owe: false), Friend(name: "Alec Nipp", amount: 0.00, owe: false), Friend(name: "Sophie Jiang", amount: 0.00, owe: false), Friend(name: "Meghan Sun", amount: 0.00, owe: false)]
     @Published var isShowing: Bool = false
     @Published var chargee: Friend = Friend(name:"", amount:0.00, owe:false)
     @Published var description: String = ""

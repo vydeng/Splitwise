@@ -33,6 +33,7 @@ struct CreateChargeView: View {
                     .padding(.leading, 30)
                     TextField("Enter a description", text: $vm.description)
                     .underline()
+                    .keyboardType(.default)
             }
             .font(.largeTitle)
             HStack {
@@ -88,7 +89,6 @@ struct CreateChargeView: View {
                         }
                     }
         }
-        .keyboardType(.default)
     }
 }
 
